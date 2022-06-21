@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css' />
+    <title>MusicPlayer</title>
+</head>
+<style>
+    body {
+        text-align: center;
+        background: linear-gradient(to top right, #33ccff 10%, #ff99cc 100%);
+        background-attachment: fixed;
+        /*Makes the blur*/
+    }
+    
+    #playbutton {
+        height: 250px;
+        width: 250px;
+        background: linear-gradient(to top right, #0000ff 0%, #ff00ff 100%);
+        border-radius: 50%;
+        display: inline-block;
+        margin-top: 1vh;
+        transition: 0.2s;
+        font-size: 160px;
+        cursor: pointer;
+    }
+    
+    #playbutton:hover {
+        height: 260px;
+        width: 260px;
+        font-size: 170px;
+    }
+    
+    .button {
+        padding: 20px 20px 20px 50px;
+        position: relative;
+        top: 10px;
+    }
+    
+    #pictureMusic {
+        width: 500px;
+        height: 500px;
+        background-color: rgb(51, 153, 90);
+        border-radius: 20px;
+        color: white;
+        text-align: center;
+        display: inline-block;
+    }
+    
+    #top {
+        padding: 100px 0px 0px 0px;
+    }
+    
+    #music {
+        font-size: x-large;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+</style>
+
+<body>
+    <div id="top"></div>
+    <div id="pictureMusic">
+        Your music
+    </div>
+    <p id="music">Your music your music your music</p>
+    <div id="playbutton">
+        <span class="button"> &#9654;
+        </span>
+    </div>
+</body>
+
+</html>
