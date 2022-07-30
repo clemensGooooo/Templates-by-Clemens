@@ -1,0 +1,29 @@
+body {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: xx-large;
+}
+
+#tableNumber {
+    display: flex;
+}
+
+#table {
+    margin: auto;
+}
+
+#table td {
+    padding: 50px;
+}
+
+.disabled {
+    background-color: aqua;
+    font-size: x-large;
+    padding: 20px 15px;
+    border: 0px solid;
+    cursor: pointer;
+}
+
+.enabled {
+    background-color: rgb(255, 86, 86);
+}
