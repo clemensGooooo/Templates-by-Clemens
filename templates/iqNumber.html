@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        text-align: center;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: xx-large;
+    }
+    
+    #tableNumber {
+        display: flex;
+    }
+    
+    #table {
+        margin: auto;
+    }
+    
+    #table td {
+        padding: 50px;
+    }
+    
+    .disabled {
+        background-color: aqua;
+        font-size: x-large;
+        padding: 20px 15px;
+        border: 0px solid;
+        cursor: pointer;
+    }
+    
+    .enabled {
+        background-color: rgb(255, 86, 86);
+    }
+</style>
+
+<body>
+    <h1>Guess the Number</h1>
+    <div id="tableNumber">
+        <table id="table">
+            <tr>
+                <td>
+                    <div id="fieldRan">Field</div>
+                </td>
+                <td>
+                    <button id="button" onclick="numberClick()">Die auserw&auml;hlte Nummer</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="number" placeholder="0" max="20" min="1" id="value" onkeyup="numberChange()" autocomplete="off">
+                </td>
+                <td>
+                    <div id="difference">
+                        Difference
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td id="iq">
+                    IQ
+                </td>
+                <td id="counter">0</td>
+            </tr>
+        </table>
+    </div>
+</body>
+<script>
+    var field = document.getElementById("button");
+    var value = document.getElementById("value");
+    var randomField = document.getElementById("fieldRan");
+    var difference = document.getElementById("difference");
+    var counterD = document.getElementById("counter");
+    var iq = document.getElementById("iq");
+    var couter = 0;
+
+    function getRandomNumber(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    randomField.innerText = "secret";
+
+    if (value.value > 0 && value.value <= 20)
+        field.className = "disabled enabled"
+    else
+        field.className = "disabled";
+
+    numberChange = () => {
+        if (value.value > 0 && value.value <= 20) {
+            field.className = "disabled enabled"
+        }
+    }
+    numberClick = () => {
+        couter++;
+        counterD.innerText = couter;
+        if (value.value > 0 && value.value <= 20) {
+            field.className = "disabled enabled"
+                // alert(`Number is ${value.value}`)
+            var ranNum = getRandomNumber(1, 20);
+            var dif = "";
+            randomField.innerText = ranNum;
+            if (value.value > ranNum) {
+                dif = value.value - ranNum;
+            } else if (value.value < ranNum) {
+                dif = ranNum - value.value
+            }
+            if (value.value != ranNum) {
+                iq.innerText = String(140 - (dif * 3)) + String(" IQ");
+                dif = String(dif + " - ") + String(dif / 20 * 100) + "%";
+            }
+            if (value.value == ranNum) {
+                dif = "You are very amongus like";
+                iq.innerText = "10000000000 IQ"
+                couter = 0;
+            }
+            difference.innerText = dif;
+        } else {
+            alert("Please change the number 1-20")
+        }
+    }
+</script>
+
+</html>
