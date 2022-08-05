@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+}
+
+#all {
+    background-color: bisque;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+#playsection {
+    position: absolute;
+    width: 100vw;
+    height: 200px;
+    background-color: brown;
+}
+
+#kangaroo {
+    width: 100px;
+    margin-top: 100px;
+}
+
+
+@keyframes jump {
+    0% {
+        margin-top: 100px;
+    }
+
+    7% {
+        margin-top: 0px;
+    }
+
+    14% {
+        margin-top: 150px;
+        margin-left: 300px;
+    }
+
+    21% {
+        margin-top: 0px;
+    }
+
+    28% {
+        margin-top: 150px;
+        margin-left: 600px;
+    }
+
+    35% {
+        margin-top: 0px;
+    }
+
+    42% {
+        margin-top: 150px;
+        margin-left: 900px;
+    }
+
+    49% {
+        margin-top: 0px;
+    }
+
+    56% {
+        margin-top: 100px;
+        margin-left: 1200px;
+    }
+
+    63% {
+        margin-top: 0px;
+    }
+
+    70% {
+        margin-top: 150px;
+        margin-left: 1500px;
+    }
+
+    77% {
+        margin-top: 0px;
+    }
+
+    84% {
+        margin-top: 150px;
+        margin-left: 1800px;
+    }
+}
