@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        overflow: hidden;
+        position: relative;
+    }
+
+    #all {
+        background-color: bisque;
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    #playsection {
+        position: absolute;
+        width: 100vw;
+        max-width: 2100px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 250px;
+        background-color: brown;
+    }
+
+    #kangaroo {
+        width: 100px;
+        margin-top: 100px;
+        animation: jump 5s infinite;
+        position: fixed;
+    }
+
+
+    @keyframes jump {
+        0% {
+            transform: translateX(-150px);
+            display: none;
+        }
+
+        7% {
+            margin-top: 0px;
+        }
+
+        14% {
+            margin-top: 150px;
+            margin-left: 300px;
+        }
+
+        21% {
+            margin-top: 0px;
+        }
+
+        28% {
+            margin-top: 150px;
+            margin-left: 600px;
+        }
+
+        35% {
+            margin-top: 0px;
+        }
+
+        42% {
+            margin-top: 150px;
+            margin-left: 900px;
+        }
+
+        49% {
+            margin-top: 0px;
+        }
+
+        56% {
+            margin-top: 100px;
+            margin-left: 1200px;
+        }
+
+        63% {
+            margin-top: 0px;
+        }
+
+        70% {
+            margin-top: 150px;
+            margin-left: 1500px;
+        }
+
+        77% {
+            margin-top: 0px;
+        }
+
+        84% {
+            margin-top: 150px;
+            margin-left: 1800px;
+            transform: rotate(0deg);
+        }
+
+        91% {
+            margin-top: 0px;
+        }
+
+        100% {
+            margin-left: 2100px;
+            margin-top: 150px;
+            transform: rotate(360deg);
+        }
+    }
+</style>
+
+<body>
+    <div id="all" onclick="jump()">
+        <div id="playsection">
+            <div id="kangaroo">
+                <img src="kangaroo.png" alt="" width="100px">
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var side = document.getElementById("playsection");
+    var kangaroo = document.getElementById("kangaroo");
+    jump = () => {
+        var randomColor = Math.floor(Math.random() * 16777215).toString(16);
+        side.style.backgroundColor = "#" + randomColor;
+    }
+</script>
+
+</html>
