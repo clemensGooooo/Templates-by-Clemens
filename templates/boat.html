@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boat</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+
+        .boat {
+            position: fixed;
+            left: 0;
+            margin-top: 100px;
+            animation: boat 15s;
+            animation-delay: 1s;
+            transform: translateX(2vw) rotateY(180deg);
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        @keyframes boat {
+            0% {
+                transform: translateX(2vw) rotateY(180deg);
+            }
+
+            49.9% {
+                transform: rotateY(180deg) translateX(-80vw);
+            }
+
+            50% {
+                transform: rotateY(0deg) translateX(80vw);
+            }
+
+            100% {
+                transform: translateX(2vw);
+            }
+        }
+
+        .boatI {
+            animation-delay: 1s;
+            animation: boatI 1s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes boatI {
+            0% {
+                transform: translateY(10px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(10px);
+            }
+        }
+
+        .waterOcean {
+            width: 100vw;
+        }
+
+        .out {
+            background-color: rgb(255, 255, 255);
+            border-radius: 5px;
+            margin-top: -100px;
+            margin-left: 65px;
+            animation: out 1.2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in;
+            animation-delay: 1s;
+            width: 10px;
+            height: 10px;
+            transform: scale(0);
+        }
+
+        @keyframes out {
+            0% {
+                transform: scale(1);
+                background-color: rgb(29, 29, 29);
+            }
+
+            70% {
+                background-color: rgb(133, 133, 133);
+            }
+
+            100% {
+                transform: translateX(70px) translateY(-40px) scale(3);
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div style="width: 100vw;">
+        <div class="boat">
+            <div class="boatI">
+                <svg width="153px" height="90px" viewBox="0 0 153 90" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <!-- Generator: Sketch 40.3 (33839) - http://www.bohemiancoding.com/sketch -->
+                    <title>Group</title>
+                    <desc>Created with Sketch.</desc>
+                    <defs />
+                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g id="180---iPhone-6-Plus" transform="translate(-14.000000, -80.000000)">
+                            <g id="Group" transform="translate(14.000000, 80.000000)">
+                                <path
+                                    d="M25.5742187,18.9955765 C25.5742187,18.4457348 26.0216213,18 26.5663746,18 L59.9648437,18 L59.9648437,0.470703125 L79.2890625,0.470703125 L79.2890625,18 L85.0097781,18 C85.5566625,18 86,18.4401063 86,18.9955765 L86,44.6367188 L107.171875,44.6367188 L107.171875,70.9936743 C107.171875,71.5494527 106.718501,72 106.181664,72 L19.9902115,72 C19.4433328,72 19,71.547889 19,70.9936743 L19,45.6430444 C19,45.0872661 19.4518727,44.6367188 19.9984823,44.6367188 L24.5757364,44.6367188 C25.127183,44.6367188 25.5742187,44.1966125 25.5742187,43.6411423 L25.5742187,18.9955765 Z"
+                                    id="Rectangle-2" fill="#D8D8D8" />
+                                <path
+                                    d="M-5.68434189e-14,53 C24.025113,54.6787696 24.6621094,56.4726562 59.0664062,61.5996094 C93.4707031,66.7265625 152,63.6210937 152,63.6210937 C152,63.6210937 152.232497,66.7884088 152,67.6318359 C151.767503,68.4752631 152,67.6318359 149.828125,71.5 C147.65625,75.3681641 143.806641,90 143.806641,90 L13.9726562,90 L2.1796875,63.6210938 L-5.68434189e-14,60.34375 L-5.68434189e-14,53 Z"
+                                    id="Rectangle" fill="#4990E2" />
+                                <rect id="Rectangle-3" fill="#A7A8AA" x="30" y="22" width="17" height="19" />
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+                <div class="out"></div>
+
+            </div>
+        </div>
+    </div>
+    <div class="water">
+    </div>
+</body>
+
+</html>
