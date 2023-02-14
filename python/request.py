@@ -13,3 +13,8 @@ r.status_code ## this showes the code for this request
 
 content_type = r.headers['content-type'] ## This line returns the content type from the answer
 ## e.g. 'application/json; charset=utf8' means JSON as answer
+
+r.text ## This outputs you the `raw` text of the request
+
+r.json() ## If your data is json, you probably want to output his in json, with this line you can do this
+
