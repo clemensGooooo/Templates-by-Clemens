@@ -1,3 +1,6 @@
+//         Potentiometer               LED
+// connect VIN  PIN  A0    and    GROUND 10
+
 int sensorValue = 0;
 int led = 10; // only PWM pins
 int mode = 2;  // mode one will change the blinking rate of the led, mode two will change the brightness
