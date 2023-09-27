@@ -1,0 +1,27 @@
+#define red 11
+#define green 9
+#define blue 10
+
+void setup() {
+  pinMode(red, OUTPUT);
+  pinMode(green, OUTPUT);
+  pinMode(blue, OUTPUT);
+}
+
+void loop() {
+ // green
+  analogWrite(red, 255);
+  analogWrite(green, 0);
+  analogWrite(blue, 0);
+  delay(200);
+  // green
+  analogWrite(red, 0);
+  analogWrite(green, 255);
+  analogWrite(blue, 0);
+  delay(200);
+  // yellow
+  analogWrite(red, 250);
+  analogWrite(green, 40);
+  analogWrite(blue, 0);
+  delay(200);
+}
