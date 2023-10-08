@@ -1,6 +1,6 @@
 import requests
 
-## now you can just start to defind the url
+## now you can just need to enter the url
 
 url = "https://httpbin.org/get"
 
