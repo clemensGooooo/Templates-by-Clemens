@@ -1,6 +1,3 @@
-# Interactive API docs: http://127.0.0.1:8000/docs
-# Alternative API docs: http://127.0.0.1:8000/redoc
-
 from typing import Union, List
 from fastapi import FastAPI, Form, UploadFile, Request
 
